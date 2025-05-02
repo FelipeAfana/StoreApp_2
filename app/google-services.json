@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994794455432",
+    "project_id": "loginfirebase-68f38",
+    "storage_bucket": "loginfirebase-68f38.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994794455432:android:b64adb7465703f0bc17a3d",
+        "android_client_info": {
+          "package_name": "me.felipe.afanador.storeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCADEkDfJuz6id-NWvBavPsmzD1_vJHDoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
