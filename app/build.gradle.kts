@@ -62,4 +62,8 @@ dependencies {
     // navigation compose
     implementation(libs.androidx.navigation.compose)
     implementation(libs.firebase.bom)
+
+    // Libreria para imagenes de internet
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
 }

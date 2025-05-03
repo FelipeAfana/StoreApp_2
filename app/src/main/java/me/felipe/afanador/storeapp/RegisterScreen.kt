@@ -228,6 +228,7 @@ fun RegisterScreen (onClickBack:()-> Unit={},onSuccefulRegistre:()->Unit={}) {
                                     onSuccefulRegistre()
                                 }else {
                                     registerError=when(task.isSuccessful){
+
                                         else->"Error al registrarse"
                                     }
                                 }
