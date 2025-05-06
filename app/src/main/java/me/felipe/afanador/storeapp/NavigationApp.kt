@@ -21,7 +21,7 @@ fun NavigationApp () {
     if (currentUser!= null){
         myStartDestination="home"
     }else{
-        myStartDestination="login"
+        myStartDestination="home"
     }
 
 

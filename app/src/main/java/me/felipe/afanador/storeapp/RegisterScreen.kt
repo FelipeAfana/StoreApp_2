@@ -245,7 +245,7 @@ fun RegisterScreen (onClickBack:()-> Unit={},onSuccefulRegistre:()->Unit={}) {
                     contentColor = Color.White
                 )
             ) {
-                Text("Iniciar Secisión")
+                Text("Iniciar Sesión")
             }
         }
     }

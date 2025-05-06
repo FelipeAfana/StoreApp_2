@@ -18,6 +18,7 @@ import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -34,6 +35,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -52,6 +54,8 @@ import java.util.stream.Stream
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen (onClickLogout:()->Unit={}) {
+    val auth =Firebase.auth
+    val user =auth.currentUser
 
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
     var urlImagenes = listOf(
@@ -62,7 +66,12 @@ fun HomeScreen (onClickLogout:()->Unit={}) {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdclRVUaVbzEd1uxJZD4HISqwnlBkmy1Wizg&s"
     )
     Scaffold(
-        topBar = {
+
+
+
+
+    topBar = {
+
              MediumTopAppBar(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -84,7 +93,10 @@ fun HomeScreen (onClickLogout:()->Unit={}) {
                     }
                 },
                 actions = {
-                    IconButton(onClick = { /* do something */ }) {
+                    IconButton(onClick = {
+                        auth.signOut()
+                        onClickLogout()
+                    }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ExitToApp,
                             contentDescription = "Localized description"

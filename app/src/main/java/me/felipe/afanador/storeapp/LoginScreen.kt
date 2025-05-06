@@ -183,7 +183,7 @@ fun LoginScreen (onClickRegister: ()-> Unit={}, onSuccesfulLogin:()-> Unit={}) {
                     contentColor = Color.White
                 )
             ) {
-                Text("Iniciar Secisión")
+                Text("Iniciar sesión")
             }
             Spacer(modifier = Modifier.height(16.dp))
 
